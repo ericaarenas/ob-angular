@@ -326,7 +326,8 @@
 </div>
 
 <div class="content" role="main">
- <app-saludo></app-saludo>
+  <!-- Input para trabajar con ngModel-->
+  <input type="text" placeholder="Nombre del usuario" [(ngModel)]="usuario">
+ <app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
  
-
 </div>

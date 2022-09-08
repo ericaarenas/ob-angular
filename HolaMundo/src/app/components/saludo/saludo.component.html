@@ -1,1 +1,13 @@
 <h1>Hola, {{ nombre }}</h1>
+<h3 id="usuario" [innerText]="nombre" [ngClass]="nombre == 'Anónimo' ? 'anonimo' : 'saludo'">
+    <!-- No indicamos nada en las etiquetas. El valor puede venir definido por la propiedad
+        el [innerText]="nombre" sería como poner en el interior del h3 {{ nombre }}    -->
+</h3>
+<p [ngStyle]="{color: 'orange'}">
+    Hola, ¿qué tal?
+</p>
+
+<p [ngStyle]="myStyle">
+    Adiós, muy buenas.
+</p>
+<button id="emit-alerta" (click)="enviarMensajeAlPadre()">Enviar mensaje de saludo al padre</button>
