@@ -1,0 +1,7 @@
+<!-- TODO: reformular con directivas estructurales y estilos condicionales -->
+<h5>Title: {{ task?.title }}</h5>
+<h6>Description: {{ task?.description }}</h6>
+
+<p>{{ task?.completed ? 'Yes' : 'No' }}</p>
+
+<button (click)="deleteTask()">Delete Task</button>

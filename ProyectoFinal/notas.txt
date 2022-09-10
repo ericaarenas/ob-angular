@@ -1,0 +1,19 @@
+Este será nuestro proyecto final.
+es un proyecto para gestionar tareas, gestion de perfiles de usuarios,.... 
+Asi que, para empezar, tendremos un componente de lista de tareas, la propia tarea
+ng g c components/TaskList (componente padre)
+ng g c components/Task (componente hijo)
+ng g c components/TaskForm (editar o crear tareas)
+ng g c components/auth/LoginForm (formulario de login)
+ng g c components/auth/RegisterForm (formulario de login)
+ng g c components/nav/NavBar
+ng g c components/pages/HomePage
+ng g c components/pages/LoginPage
+ng g c components/pages/RegisterPage
+ng g c components/pages/NotFoundPage
+
+Además añadimos carpeta para services, pipes y guards
+
+Para añadir angular material
+ng add @angular/material
+
