@@ -17,3 +17,12 @@ Además añadimos carpeta para services, pipes y guards
 Para añadir angular material
 ng add @angular/material
 
+MODULOS
+los modulos son como librerías, para poder usar en otras aplicaciones.
+Así que, dentro podemos tener más componetnes, servicios, etc
+ng g module modules/Lists
+ng g c modules/lists/BasicList
+
+DIRECTIVA DE ATRIBUTO
+modifica un evento (modelo cuando cambie) y la propiedad asociada a ese evento (en este caso el input) 
+aplicar estilo concreto (ngStyle), cambiar alguna propiedad interna
