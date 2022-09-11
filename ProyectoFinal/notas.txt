@@ -26,3 +26,6 @@ ng g c modules/lists/BasicList
 DIRECTIVA DE ATRIBUTO
 modifica un evento (modelo cuando cambie) y la propiedad asociada a ese evento (en este caso el input) 
 aplicar estilo concreto (ngStyle), cambiar alguna propiedad interna
+DIRECTIVAS ESTRUCTURALES
+las que llevan asterisco previo. Se utilizan para el renderizado ( o no ) de un elemento, ngTemplate, ngIf
+HAcen contenido dinámico
