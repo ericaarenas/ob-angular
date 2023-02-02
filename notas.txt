@@ -60,3 +60,7 @@ const routes: Routes = [
 ];
 redirigir la primera a home
 NO debe haber nunca dos rutas con el mismo nombre
+
+GUARDS
+controla qué componente es accesible CON O SIN LOGUEO
+ng g guard guards/Auth
