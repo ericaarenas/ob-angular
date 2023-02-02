@@ -36,3 +36,12 @@ obtener datos, peticiones http, etc
 Lo devolveran en forma de promesa para que los compoentnes estén escuchando pendientes de su respuesta. (singleton una unica instancia compartida)
 OBSERVABLE
 como las promesas, pero vamos recibiendo valores (coon cada next)
+
+ENRUTADO
+
+en app-module.ts se declara por defecto un AppRoutingModule que incorpora un sistema de rutas, que viene de angular con una lista de rutas.
+Creamos rutas (paginas) generalmente
+HomePage
+LoginPage
+NotFoundPage
+ng g c pages/HomePage
