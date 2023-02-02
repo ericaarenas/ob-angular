@@ -14,7 +14,13 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomePageComponent
+    component: HomePageComponent,
+    children: [
+      {
+        path: 'hijo', //rutas hijas /home/hijo
+        component: HomePageComponent
+      }
+    ]
   },
   {
     path: 'login',

@@ -45,3 +45,18 @@ HomePage
 LoginPage
 NotFoundPage
 ng g c pages/HomePage
+
+En el app-routing module:
+const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home'
+  },
+  {
+    path: 'home',
+    component: HomePageComponent
+  }
+];
+redirigir la primera a home
+NO debe haber nunca dos rutas con el mismo nombre

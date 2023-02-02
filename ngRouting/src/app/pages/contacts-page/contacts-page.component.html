@@ -1,2 +1,7 @@
 <h1>Tus contactos:</h1>
 <!-- listar contactos y navegar a detalle-->
+<div *ngFor="let contacto of listaContactos; let i=index">
+    <div routerLink="{{contacto.id}}">
+        <h6>{{contacto.nombre}}</h6>
+    </div>
+</div>
