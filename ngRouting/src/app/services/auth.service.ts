@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
     //login del usuario en regRes
-    login(email:String, password: string): Observable<any> {
+    login(email: string, password: string): Observable<any> {
 
       let body = {
         email: email,
