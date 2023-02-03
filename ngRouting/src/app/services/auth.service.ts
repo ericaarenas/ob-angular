@@ -17,7 +17,7 @@ export class AuthService {
         password: password,
       }
 
-      return this.http.post('https://regres.in/api/login', body)
+      return this.http.post('/api/login', body)
     }
   }
 

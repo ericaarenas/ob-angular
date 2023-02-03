@@ -1,11 +1,12 @@
 
 {
     "/api": {
-      "target": "https://regres.in/api/login",
+      "target": "https://regres.in",
       "secure": false,
+      "logLevel": "debug",
       "pathRewrite": {
         "^/api": ""
       },
-      "changeOrigin": true
+      "changeOrigin": false
     }
   }

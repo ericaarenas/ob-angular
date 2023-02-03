@@ -23,14 +23,14 @@ export class LoginPageComponent implements OnInit {
   loginUser() {
 
     this.authService.login(this.email, this.password).subscribe(
-      (response) => {
+       (response) => {
         if(response.token) {
           sessionStorage.setItem('token', response.token);
           this.router.navigate(['home'])
         }
       },
       (error) => console.error(`Ha habido un error al hacer login ${error}`),
-        () => console.info('Petición de login terminado')
+      () => console.info('Petición de login terminado')
     )
   }
 }
