@@ -1,14 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; //me dice el contenido de la url
+import { IContacto } from '../../models/contact.interface';
 
 @Component({
   selector: 'app-contact-detail-page',
   templateUrl: './contact-detail-page.component.html',
   styleUrls: ['./contact-detail-page.component.scss']
 })
+
 export class ContactDetailPageComponent implements OnInit {
 
   id: any | undefined;
+  contacto: IContacto = {
+    id: 0,
+    nombre: '',
+    email: '',
+    sexo: ''
+  };
 
   constructor(private route: ActivatedRoute) { }
 
@@ -23,6 +31,10 @@ export class ContactDetailPageComponent implements OnInit {
       }
     );
     //se puede hacer también con la opción de snapshot.
+    //vamos a leer también del state el contacto
+    if(history.state.data) {
+      this.contacto = history.state.data;
+    }
   }
 
 }

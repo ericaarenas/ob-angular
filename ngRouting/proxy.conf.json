@@ -1,0 +1,7 @@
+{
+    "/api": {
+        "target": "https://regres.in/api/login",
+        "secure": true,
+        "changeOrigin": true
+    }
+}

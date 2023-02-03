@@ -19,7 +19,7 @@ export class ContactService {
     } else if (sexo == 'todos') {
       return Promise.resolve(this.listaContactos);
     } else {
-      Promise.reject('filtro no válido')
+      return Promise.reject('filtro no válido')
     }
 
   }
