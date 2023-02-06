@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -7,6 +7,11 @@ import { SaludoComponent } from './components/saludo/saludo.component';
 import { ListsModule } from './modules/lists/lists.module';
 import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
 import { LoginFormComponent } from './components/forms/login-form/login-form.component';
+import { FormularioComponent } from './components/forms/formulario/formulario.component';
+import { FormularioAnidadoComponent } from './components/forms/formulario-anidado/formulario-anidado.component';
+import { FormularioArrayComponent } from './components/forms/formulario-array/formulario-array.component';
+import { FormularioValidadoComponent } from './components/forms/formulario-validado/formulario-validado.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -14,13 +19,21 @@ import { LoginFormComponent } from './components/forms/login-form/login-form.com
     AppComponent,
     SaludoComponent,
     ListaContactosComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    FormularioComponent,
+    FormularioAnidadoComponent,
+    FormularioArrayComponent,
+    FormularioValidadoComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, //para usar el ngModel
     ListsModule,
-    HttpClientModule
+    //importamos el módulo HttpClienModule para peticiones HTTP
+    HttpClientModule,
+    //importamos reactiveFormsModule para trabajar con formularios reactivos
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
