@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 //ejemplo basico de formulario reactivo
 import { FormBuilder, FormGroup } from '@angular/forms';
 
@@ -11,7 +10,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class FormularioComponent implements OnInit {
 
 //definimos nuestro formulario
-miFormulario: FormGroup | undefined; //creamos la variable donde iran todos los campos y el FormBuilder nos ayudará a crearlo
+miFormulario: FormGroup = new FormGroup({}); //se inicializa por el strict 
+//creamos la variable donde iran todos los campos y el FormBuilder nos ayudará a crearlo
 
 //inyectamos la clase FormBuilder para construir el FormGroup
   constructor(private formBuilder: FormBuilder) { }

@@ -12,7 +12,8 @@ import { FormularioAnidadoComponent } from './components/forms/formulario-anidad
 import { FormularioArrayComponent } from './components/forms/formulario-array/formulario-array.component';
 import { FormularioValidadoComponent } from './components/forms/formulario-validado/formulario-validado.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+//Angular material
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     //importamos reactiveFormsModule para trabajar con formularios reactivos
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    //importamos los modulos de Angular material
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
