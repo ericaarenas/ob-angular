@@ -14,6 +14,7 @@ export class FormularioValidadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.miFormularioValidado = this.formBuilder.group({
+
       nombre: ['', Validators.required], //campo obligatrio
       apellidos: '', 
       edad: ['', Validators.compose([Validators.required, Validators.min(18), Validators.max(99)])],
@@ -46,4 +47,10 @@ export class FormularioValidadoComponent implements OnInit {
   }
 
   //metodo de submit del formulario
+  enviarFormulario() {
+    if(this.miFormularioValidado.valid) {
+      console.table(this.miFormularioValidado.value)
+      this.miFormularioValidado.reset()
+    }
+  }
 }
