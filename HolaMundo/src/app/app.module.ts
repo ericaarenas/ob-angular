@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,7 +17,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { EjemploPipesComponent } from './components/ejemplo-pipes/ejemplo-pipes.component';
 import { MultiplicaPipe } from './pipes/multiplica.pipe';
 import { CalcularPuntuacionPipe } from './pipes/calcular-puntuacion.pipe';
-
+//locale para PIPES
+import { registerLocaleData } from '@angular/common';
+import localeES from '@angular/common/locales/es';
+registerLocaleData(localeES); //registramos el LOCALE_ID de 'es' para poder usarlo
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +48,13 @@ import { CalcularPuntuacionPipe } from './pipes/calcular-puntuacion.pipe';
     //importamos los modulos de Angular material
     MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    //registrar el localeEs para que los pipes salgan en español
+    {
+      provide: LOCALE_ID, useValue: 'es'
+    }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
