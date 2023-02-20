@@ -67,3 +67,6 @@ ng g guard guards/Auth
 
 pipes
 herramientas que nos ofrece angular para controlar como se representa en la vista los datos
+para crear uno propio
+ng g p pipes/nombre
+Hay que declararlo en el módulo

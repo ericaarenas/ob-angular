@@ -14,8 +14,33 @@
 <p>Bienvenido, {{ nombre | uppercase}}</p>
 <p>Nombre de usuario, @{{ nombre | lowercase}}</p>
 
+<!-- Decimales -->
+<p>PI (3 decimales): {{ numero_PI | number: '.3-3'}}</p>
+<p>PI (5 decimales): {{ numero_PI | number: '.5-5'}}</p>
+<p>PI (2 enteros y 8 decimales): {{ numero_PI | number: '2.8-8'}}</p>
+<!-- Monedas  (Currency)-->
+
+<p>Precio del Carrito (€): {{ precioCarrito | currency: 'EUR' }}</p>
+<p>Precio del Carrito (Dollares): {{ precioCarrito | currency: 'USD':true }}</p>
+<p>Precio del Carrito (€): {{ precioCarrito | currency: 'EUR':true:'.3-3' }}</p>
+
+<!-- JSON  -->
+<p>Persona: {{ persona | json }}</p>
+
+<!-- porcentajes -->
+<p>Porcentaje de votos obtenidos: {{ cantidad | percent: '2.2-2' }}</p>
+
+<!-- slice  -->
+<p>Texto demasiado largo: {{ textoLargo | slice:0:10 }}...</p>
+
+
+<!-- Combinaciones de pipes  -->
 <p>Mi cumpleaños con PIPE DATE short/Full MAYUSCULAS: {{ dob | date: dateFormat | uppercase }}</p>
 <p>Mi cumpleaños con PIPE DATE short/Full Minusculas: {{ dob | date: dateFormat | lowercase }}</p>
 
 <!-- un pipe personalizado (Multiplica) -->
 <p> Resultado: {{2 | multiplica: 10}} puntos</p>
+
+<!-- Pipe personalizado (calcularPuntuacion) -->
+<p> {{ jugador1 | calcularPuntuacion }}</p>
+<p> {{ jugador2 | calcularPuntuacion }}</p>
