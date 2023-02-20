@@ -10,5 +10,12 @@
 <p>Mi cumpleaños con PIPE DATE short/Full es: {{ dob | date: dateFormat }}</p>
 <button (click)="cambioFormato()">Cambio Formato a {{ cambio? 'Full': 'Short' }}</button>
 
+<!-- Mayusculas /Minusculas -->
+<p>Bienvenido, {{ nombre | uppercase}}</p>
+<p>Nombre de usuario, @{{ nombre | lowercase}}</p>
+
 <p>Mi cumpleaños con PIPE DATE short/Full MAYUSCULAS: {{ dob | date: dateFormat | uppercase }}</p>
 <p>Mi cumpleaños con PIPE DATE short/Full Minusculas: {{ dob | date: dateFormat | lowercase }}</p>
+
+<!-- un pipe personalizado (Multiplica) -->
+<p> Resultado: {{2 | multiplica: 10}} puntos</p>

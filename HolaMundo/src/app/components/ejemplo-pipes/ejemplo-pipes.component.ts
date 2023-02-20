@@ -9,6 +9,7 @@ export class EjemploPipesComponent implements OnInit {
 
   dob: Date = new Date(1991,8,25);
   cambio: boolean = true;
+  nombre: string = 'Erica';
 
   constructor() { }
 
