@@ -14,6 +14,7 @@ export class ContactDetailPageComponent implements OnInit {
   contacto: IContacto = {
     id: 0,
     nombre: '',
+    apellido: '',
     email: '',
     sexo: ''
   };
