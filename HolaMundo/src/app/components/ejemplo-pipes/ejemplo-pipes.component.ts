@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjemploPipesComponent implements OnInit {
 
+  dob: Date = new Date(1991,8,25);
+  cambio: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  get dateFormat() {
+    return this.cambio ? 'shortDate': 'fullDate';
+  }
+  cambioFormato() {
+    this.cambio = !this.cambio;
+  }
 }
