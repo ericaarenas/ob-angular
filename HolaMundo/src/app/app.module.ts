@@ -14,6 +14,7 @@ import { FormularioValidadoComponent } from './components/forms/formulario-valid
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Angular material
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { EjemploPipesComponent } from './components/ejemplo-pipes/ejemplo-pipes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FormularioComponent,
     FormularioAnidadoComponent,
     FormularioArrayComponent,
-    FormularioValidadoComponent
+    FormularioValidadoComponent,
+    EjemploPipesComponent
   ],
   imports: [
     BrowserModule,

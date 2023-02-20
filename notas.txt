@@ -64,3 +64,6 @@ NO debe haber nunca dos rutas con el mismo nombre
 GUARDS
 controla qué componente es accesible CON O SIN LOGUEO
 ng g guard guards/Auth
+
+pipes
+herramientas que nos ofrece angular para controlar como se representa en la vista los datos
