@@ -9,3 +9,6 @@
 <p>Mi cumpleaños con PIPE DATE short/Full es: {{ dob | date: "fullDate" }}</p>
 <p>Mi cumpleaños con PIPE DATE short/Full es: {{ dob | date: dateFormat }}</p>
 <button (click)="cambioFormato()">Cambio Formato a {{ cambio? 'Full': 'Short' }}</button>
+
+<p>Mi cumpleaños con PIPE DATE short/Full MAYUSCULAS: {{ dob | date: dateFormat | uppercase }}</p>
+<p>Mi cumpleaños con PIPE DATE short/Full Minusculas: {{ dob | date: dateFormat | lowercase }}</p>
