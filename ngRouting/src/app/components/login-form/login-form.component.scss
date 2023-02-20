@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+
+//modificar los estilos de card de angular material
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+}
+mat-card-header {
+    display: unset;
+}
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+//modificamos los estilos de los campos del forulario de angular material
+mat-form-field {
+    display: block;
+    min-width: 300px;
+    width: 100%;
+}

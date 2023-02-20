@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'responseType': 'text'
+  }),
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +25,7 @@ export class AuthService {
         password: password,
       }
 
-      return this.http.post('/api/login', body)
+      return this.http.post('/api/login', body, {responseType: 'text'})
     }
   }
 
